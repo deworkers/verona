@@ -1,0 +1,209 @@
+/*
+LESS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: @icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+@icon-home: x y offset_x offset_y width height total_width total_height image_path name;
+
+At the bottom of this section, we provide information about the spritesheet itself
+@spritesheet: width height image @spritesheet-sprites;
+*/
+@body-name: 'body';
+@body-x: 98px;
+@body-y: 182px;
+@body-offset-x: -98px;
+@body-offset-y: -182px;
+@body-width: 96px;
+@body-height: 98px;
+@body-total-width: 684px;
+@body-total-height: 378px;
+@body-image: '../img/sprite.png';
+@body: 98px 182px -98px -182px 96px 98px 684px 378px '../img/sprite.png' 'body';
+@fb-name: 'fb';
+@fb-x: 292px;
+@fb-y: 182px;
+@fb-offset-x: -292px;
+@fb-offset-y: -182px;
+@fb-width: 70px;
+@fb-height: 70px;
+@fb-total-width: 684px;
+@fb-total-height: 378px;
+@fb-image: '../img/sprite.png';
+@fb: 292px 182px -292px -182px 70px 70px 684px 378px '../img/sprite.png' 'fb';
+@inst-name: 'inst';
+@inst-x: 362px;
+@inst-y: 182px;
+@inst-offset-x: -362px;
+@inst-offset-y: -182px;
+@inst-width: 70px;
+@inst-height: 70px;
+@inst-total-width: 684px;
+@inst-total-height: 378px;
+@inst-image: '../img/sprite.png';
+@inst: 362px 182px -362px -182px 70px 70px 684px 378px '../img/sprite.png' 'inst';
+@logo-text-name: 'logo-text';
+@logo-text-x: 321px;
+@logo-text-y: 0px;
+@logo-text-offset-x: -321px;
+@logo-text-offset-y: 0px;
+@logo-text-width: 363px;
+@logo-text-height: 87px;
+@logo-text-total-width: 684px;
+@logo-text-total-height: 378px;
+@logo-text-image: '../img/sprite.png';
+@logo-text: 321px 0px -321px 0px 363px 87px 684px 378px '../img/sprite.png' 'logo-text';
+@logo-name: 'logo';
+@logo-x: 0px;
+@logo-y: 0px;
+@logo-offset-x: 0px;
+@logo-offset-y: 0px;
+@logo-width: 321px;
+@logo-height: 182px;
+@logo-total-width: 684px;
+@logo-total-height: 378px;
+@logo-image: '../img/sprite.png';
+@logo: 0px 0px 0px 0px 321px 182px 684px 378px '../img/sprite.png' 'logo';
+@men-name: 'men';
+@men-x: 0px;
+@men-y: 280px;
+@men-offset-x: 0px;
+@men-offset-y: -280px;
+@men-width: 96px;
+@men-height: 98px;
+@men-total-width: 684px;
+@men-total-height: 378px;
+@men-image: '../img/sprite.png';
+@men: 0px 280px 0px -280px 96px 98px 684px 378px '../img/sprite.png' 'men';
+@sm-name: 'sm';
+@sm-x: 650px;
+@sm-y: 87px;
+@sm-offset-x: -650px;
+@sm-offset-y: -87px;
+@sm-width: 16px;
+@sm-height: 16px;
+@sm-total-width: 684px;
+@sm-total-height: 378px;
+@sm-image: '../img/sprite.png';
+@sm: 650px 87px -650px -87px 16px 16px 684px 378px '../img/sprite.png' 'sm';
+@spa-name: 'spa';
+@spa-x: 194px;
+@spa-y: 182px;
+@spa-offset-x: -194px;
+@spa-offset-y: -182px;
+@spa-width: 98px;
+@spa-height: 96px;
+@spa-total-width: 684px;
+@spa-total-height: 378px;
+@spa-image: '../img/sprite.png';
+@spa: 194px 182px -194px -182px 98px 96px 684px 378px '../img/sprite.png' 'spa';
+@venzel-name: 'venzel';
+@venzel-x: 321px;
+@venzel-y: 87px;
+@venzel-offset-x: -321px;
+@venzel-offset-y: -87px;
+@venzel-width: 329px;
+@venzel-height: 32px;
+@venzel-total-width: 684px;
+@venzel-total-height: 378px;
+@venzel-image: '../img/sprite.png';
+@venzel: 321px 87px -321px -87px 329px 32px 684px 378px '../img/sprite.png' 'venzel';
+@vk-name: 'vk';
+@vk-x: 432px;
+@vk-y: 182px;
+@vk-offset-x: -432px;
+@vk-offset-y: -182px;
+@vk-width: 70px;
+@vk-height: 70px;
+@vk-total-width: 684px;
+@vk-total-height: 378px;
+@vk-image: '../img/sprite.png';
+@vk: 432px 182px -432px -182px 70px 70px 684px 378px '../img/sprite.png' 'vk';
+@women-name: 'women';
+@women-x: 0px;
+@women-y: 182px;
+@women-offset-x: 0px;
+@women-offset-y: -182px;
+@women-width: 98px;
+@women-height: 98px;
+@women-total-width: 684px;
+@women-total-height: 378px;
+@women-image: '../img/sprite.png';
+@women: 0px 182px 0px -182px 98px 98px 684px 378px '../img/sprite.png' 'women';
+@spritesheet-width: 684px;
+@spritesheet-height: 378px;
+@spritesheet-image: '../img/sprite.png';
+@spritesheet-sprites: @body @fb @inst @logo-text @logo @men @sm @spa @venzel @vk @women;
+@spritesheet: 684px 378px '../img/sprite.png' @spritesheet-sprites;
+
+/*
+The provided classes are intended to be used with the array-like variables
+
+.icon-home {
+  .sprite-width(@icon-home);
+}
+.icon-email {
+  .sprite(@icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+.sprite-width(@sprite) {
+  width: extract(@sprite, 5);
+}
+
+.sprite-height(@sprite) {
+  height: extract(@sprite, 6);
+}
+
+.sprite-position(@sprite) {
+  @sprite-offset-x: extract(@sprite, 3);
+  @sprite-offset-y: extract(@sprite, 4);
+  background-position: @sprite-offset-x @sprite-offset-y;
+}
+
+.sprite-image(@sprite) {
+  @sprite-image: extract(@sprite, 9);
+  @sprite-image-bare: ~`"@{sprite-image}".slice(1, -1)`;
+  background-image: url(@sprite-image-bare);
+}
+
+.sprite(@sprite) {
+  .sprite-image(@sprite);
+  .sprite-position(@sprite);
+  .sprite-width(@sprite);
+  .sprite-height(@sprite);
+}
+
+/*
+The `.sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of LESS
+
+This must be run when you have at least 2 sprites.
+  If run with a single sprite, then there will be reference errors.
+
+.sprites(@spritesheet-sprites);
+*/
+.sprites(@sprites, @i: 1) when (@i <= length(@sprites)) {
+  @sprite: extract(@sprites, @i);
+  @sprite-name: e(extract(@sprite, 10));
+  .@{sprite-name} {
+    .sprite(@sprite);
+  }
+  .sprites(@sprites, @i + 1);
+}
