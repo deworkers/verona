@@ -14,7 +14,6 @@ body {
 
 
 .head {
-	background-color: #d1bfa9;
 
 	&:after {
 		content: "";
@@ -122,6 +121,10 @@ body {
 .slider-main {
 	margin-top: -200px;
 	z-index: 0;
+	top: -80px;
+	background-color: #d1bfa9;
+	overflow: hidden;
+	width: 100%;
 
 	&:after {
 		content: "";
@@ -132,7 +135,27 @@ body {
 		height: 178px;
 		background-image: url(/img/slider-angle.png);
 		background-position: 50% 0;
+		z-index: 10;
+	}
 
+	.swiper-pagination {
+		bottom: 150px;
+		text-align: right;
+		z-index: 20;
+		right: 30px;
+		left: auto;
+	}
+
+	.swiper-pagination-bullet {
+		background: none;
+		border: 2px solid #fff;
+		width: 12px;
+		height: 12px;
+		opacity: 1;
+	}
+
+	.swiper-pagination-bullet-active {
+		background: #fff;
 	}
 }
 
@@ -375,6 +398,10 @@ body {
 	margin-bottom: 30px;
 }
 
+.footer-cols {
+	display: table-cell;
+}
+
 .footer-col {
 	display: table-cell;
 }
@@ -438,6 +465,7 @@ body {
 	width: 35px;
 	height: 35px;
 	position: relative;
+	margin-right: 5px;
 	&:after {
 		.sprite(@vk);
 		content: "";
@@ -453,6 +481,7 @@ body {
 	width: 35px;
 	height: 35px;
 	position: relative;
+	margin-right: 5px;
 	&:after {
 		.sprite(@fb);
 		content: "";
@@ -468,6 +497,7 @@ body {
 	width: 35px;
 	height: 35px;
 	position: relative;
+	margin-right: 5px;
 	&:after {
 		.sprite(@inst);
 		content: "";

@@ -4,13 +4,362 @@
 		max-width: 1024px;
 		padding: 0 30px;
 	}
+
+	.slider-one {
+		background-position: 180px 0;
+	}
+
+	.footer-menu {
+		a {
+			white-space: normal;
+		}
+	}
+
+	.footer-menu--col {
+		columns: 1;
+
+	}
 }
 
 @media screen and (max-width: 1024px) { // планшет вертикально
+	.head-top {
+		padding: 30px 0;
+	}
+
+	.head-logo {
+		margin-top: 20px;
+    	display: inline-block;
+	}
+
+	.head-top-right {
+		text-align: right;
+		margin-top: 0;
+	}
+
+	.head-adress {
+		display: block;
+		text-align: right;
+		margin-right: 0;
+		margin-bottom: 10px;
+
+		br {
+			display: none;
+		}
+	}
+
+
+	.head-phone {
+		display: block;
+		text-align: right;
+		margin-right: 0;
+		margin-bottom: 10px;
+	}
+
+	.slider-main {
+		top: -170px;
+	}
+
+	.head--main {
+		height: 720px;
+	}
+
+	.service {
+		width: 44%;
+		margin: 0 3% 40px;
+
+		&:last-child {
+			margin: 0 3% 40px;
+		}
+	}
+
+	.footer-col {
+		padding-bottom: 20px;
+	}
+
+	.footer-cols {
+		display: table-row;
+	}
+
+	.footer-menu--col {
+		columns: 2;
+
+		a {
+			white-space: normal;
+		}
+	}
+
+	.footer-menu--nocol {
+		columns: 1;
+	}
+
+	.footer {
+		background-image: url(/img/footer-bg-respons.jpg);
+		padding: 130px 0 0 0;
+    	margin-top: -50px;
+	}
+
+	.footer-top {
+		margin-bottom: 0;
+	}
+
+	.footer-copy {
+		position: absolute;
+		bottom: 20px;
+		left: 0;
+	}
+
+	.footer-bottom {
+		padding: 0 0 80px;
+	}
+
+	.footer-right {
+		width: 100%;
+		display: table;
+		float: none;
+	}
+
+	.footer-social {
+		display: table-cell;
+	}
+
+	.footer-phone {
+		display: table-cell;
+	}
+
+	.footer-order {
+		display: table-cell;
+		width: 140px;
+	}
+
+	.footer-menu a {
+		margin-bottom: 7px;
+	}
+
+	.slider-one {
+		background-position: 50px 0;
+	}
+
+	.slider-one-text {
+		max-width: 350px;
+	}
+
+	.about {
+		margin-bottom: 30px;
+	}
+
+	.services {
+		margin-bottom: 0;
+	}
+
+	.price__title {
+		margin-bottom: 30px;
+	}
 
 }
 
 @media screen and (max-width: 768px) { // планшет горизонтально
+	.footer-menu {
+		display: none;
+	}
+
+	.service {
+		width: 100%;
+		margin: 0 0 20px !important;
+	}
+
+	.service-descr {
+		display: none;
+	}
+
+	.service__order {
+		display: none;
+	}
+
+	.price-one {
+		width: 100%;
+		margin-right: 0;
+	}
+
+	.about {
+		margin-top: 30px;
+	}
+
+	.about-img {
+		width: 100%;
+		float: none;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.about-text {
+		padding-top: 20px;
+
+		h1 {
+			font-size: 26px;
+			margin-bottom: 20px;
+		}
+
+		p {
+			font-size: 15px;
+			margin-bottom: 20px;
+			line-height: 26px;
+		}
+	}
+
+	.head {
+		background-color: #d1bfa9;
+	}
+
+	.head:after {
+		display: none;
+	}
+
+	.head-top {
+		text-align: center;
+		padding: 0 0 20px;
+	}
+
+	.head-logo {
+		margin-bottom: 20px;
+	}
+
+	.head-top-right {
+		float: none;
+		text-align: center;
+	}
+
+	.head-adress {
+		text-align: center;
+	}
+
+	.head-phone {
+		text-align: center;
+	}
+
+	.head-menu {
+		margin: 0;
+		padding: 0;
+		display: table;
+		text-align: left;
+		li {
+			display: inline-block;
+			width: 50%;
+			text-align: left;
+			font-size: 18px;
+			font-weight: 700;
+			margin-bottom: 0;	
+		}
+
+		a {
+			padding: 5px 0;
+
+			&:hover {
+				border: none;
+			}
+		}
+	}
+
+	.slider-one {
+		background-position: 50% 0;
+
+		&:after {
+			content: "";
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: #a18561;
+			opacity: 0.75;
+		}
+	}
+
+	.slider-main:after {
+		background-position: 55% 0;
+	}
+
+	.slider-one-text {
+		color: #fff;
+		padding-top: 410px;
+	}
+
+	.slider-one__title {
+		font-size: 30px;
+	}
+
+	.slider-one__subtitle {
+		color: #fff;
+	}
+
+	.slider-main {
+		top: -190px;
+	}
+
+	.head-logo__verona {
+		width: 120px;
+	}
+
+	.head-logo__text {
+		width: 130px;
+	}
+
+	.slider-main .swiper-pagination {
+		bottom: 30px;
+	}
+
+	.footer {
+		background-image: url(/img/footer-bg-mobile.jpg);
+		background-position: 50% 0%;
+	}
+
+	.footer-top {
+		display: block;
+	}
+
+	.footer-cols {
+		display: block;
+	}
+
+	.footer-col {
+		display: block;
+		padding-bottom: 0;
+	}
+
+	.footer-col--main {
+		position: absolute;
+		top: -60px;
+		right: 0;
+	}
+
+	.footer-bottom {
+		text-align: center;
+	}
+
+	.footer-right {
+		display: block;
+	}
+
+	.footer-social {
+		display: block;
+		margin-right: 0;
+		margin-bottom: 20px;
+	}
+
+	.footer-phone {
+		display: block;
+		margin-right: 0;
+		margin-bottom: 20px;
+	}
+
+	.footer-order {
+		display: block;
+		margin: 0 auto;
+		text-align: center;
+		width: 200px;
+		margin-bottom: 20px;
+	}
 
 }
 
