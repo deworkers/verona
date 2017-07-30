@@ -89,6 +89,21 @@ $(document).ready(function() {
     var topSlider = new Swiper('.slider-main', {
         pagination: '.swiper-pagination',
         paginationClickable: true
-    });   
+    }); 
 
+    var cardSlider = new Swiper('.card-gallery', {
+        hashnav: true,
+        hashnavWatchState: true,
+        paginationClickable: true
+    }); 
+
+    var sliderCarusel = new Swiper('.gallery-list', {
+        slidesPerView: 5,
+        spaceBetween: 5,
+    });
+
+    $('.carusel-one').on('click', function() {
+        $('.carusel-one').removeClass('active');
+        $(this).addClass('active');
+    });
 });
