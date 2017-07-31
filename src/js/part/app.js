@@ -88,7 +88,9 @@ $(document).ready(function() {
     
     var topSlider = new Swiper('.slider-main', {
         pagination: '.swiper-pagination',
-        paginationClickable: true
+        paginationClickable: true,
+        effect: 'fade',
+        speed: 500
     }); 
 
     var cardSlider = new Swiper('.card-gallery', {
@@ -102,8 +104,36 @@ $(document).ready(function() {
         spaceBetween: 5,
     });
 
+    var sertSlider = new Swiper('.sert-slider', {
+        slidesPerView: 3,
+        spaceBetween: 10,
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        breakpoints: {
+            480: {
+              slidesPerView: 1,
+              spaceBetween: 20
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 30
+            }
+        }
+    });
+
     $('.carusel-one').on('click', function() {
         $('.carusel-one').removeClass('active');
         $(this).addClass('active');
+    });
+
+    $('.sert-slider .swiper-slide').magnificPopup({
+        type: 'image',
+        closeOnContentClick: true,
+        closeBtnInside: false,
+        fixedContentPos: true,
+        mainClass: 'mfp-no-margins mfp-with-zoom', // class to remove default margin from left and right side
+        image: {
+            verticalFit: true
+        }
     });
 });

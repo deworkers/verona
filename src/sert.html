@@ -13,7 +13,50 @@
 </head>
 <body>
     //= template/head-in.html
-    //= template/catalog/card.html
+    
+    <div class="content">
+        <div class="wrap">
+            <div class="bread">
+                <a href="#">Главная</a>  •  <a href="#">Услуги</a>  •  Процедуры для лица
+            </div>
+            <h1>Сертификаты</h1>
+            <p>Центр современной косметологии "Верона" имеет Лицензию на осуществление медицинской деятельности №ЛО-66-01-004239</p>
+            <div class="sert-slider">
+                <div class="swiper-wrapper">
+                    <a href="http://verona96.ru/uploads/tinymce/licenziya1-700.jpg" class="swiper-slide" style="background-image: url(http://verona96.ru/uploads/tinymce/licenziya1-700.jpg);">
+                        <div class="sert-title">Лицензия на осуществление медицинской деятельности</div>
+                    </a>
+                    <a href="http://verona96.ru/uploads/tinymce/licenziya1-700.jpg" class="swiper-slide" style="background-image: url(http://verona96.ru/uploads/tinymce/licenziya1-700.jpg);">
+                        <div class="sert-title">Лицензия на осуществление медицинской деятельности</div>
+                    </a>
+                    <a href="http://verona96.ru/uploads/tinymce/licenziya1-700.jpg" class="swiper-slide" style="background-image: url(http://verona96.ru/uploads/tinymce/licenziya1-700.jpg);">
+                        <div class="sert-title">Лицензия на осуществление медицинской деятельности</div>
+                    </a>
+                </div>
+                
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>   
+        </div>
+
+        <div class="wrap">
+            <div class="form-order">
+                <div class="order-title">Запись на прием</div>
+                <form action="" id="order">
+                    <div class="form-left">
+                        <input type="text" name="name" placeholder="Ваше имя*">
+                        <input type="text" name="phone" placeholder="Номер телефона*">
+                        <input type="text" name="email" placeholder="E-mail">
+                    </div>
+                    <div class="form-right">
+                        <textarea name="text" placeholder="Текст сообщения"></textarea>
+                    </div>
+                    <button class="order-submit" type="submit">Записаться</button>
+                </form>
+            </div>
+        </div>  
+    </div>
+
     //= template/footer.html
     //= template/modal.html
     </div>

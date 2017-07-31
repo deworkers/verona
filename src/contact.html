@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+    <meta charset="UTF-8">
+    <title>main page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="js/main.js"></script>
+
+    <!-- Шрифты -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic" rel="stylesheet">
+
+</head>
+<body>
+    //= template/head-in.html
+    
+    <div class="content">
+        <div class="wrap">
+            <div class="breadcrumb">
+                <a href="#">Главная</a>  •  <a href="#">Услуги</a>  •  Процедуры для лица
+            </div>
+            <h1>Контакты</h1>
+            <div class="clearfix">
+                <img src="/img/verona.jpg" alt="" class="contact-img">
+                <div class="contact-right">
+                    <h3>Центр современной косметологии "Верона"</h3>
+                    <p><b>Адрес:</b> г. Екатеринбург, ул. Баумана, 2а 
+                    (рядом с метро Уралмаш)</p>
+                    <p><b>Телефоны:</b> +7 (922) 035-22-22, +7 (343) 331-33-44</p>
+                    <p>Мы работаем для Вас каждый день с 9.00 до 21.00</p>
+                </div>
+            </div>
+        </div>
+        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+        <script>
+            ymaps.ready(function () {
+                var myMap = new ymaps.Map('map', {
+                        center: [56.83171856787374,60.6625664999999],
+                        zoom: 16,
+                        controls: []
+                    }, {
+                    }),
+                 
+                    myPlacemark = new ymaps.Placemark([
+                        56.83171856787374,60.6625664999999
+                    ], {
+                         hintContent: 'Собственный значок метки'
+                    }, {
+                        iconLayout: 'default#image',
+                        iconImageHref: '/img/map.png',
+                        iconImageSize: [59, 71],
+                        iconImageOffset: [-30, -71]
+                    });
+                myMap.geoObjects.add(myPlacemark);
+            });
+        </script>
+        <div id="map"></div>
+    </div>
+
+    //= template/footer.html
+    //= template/modal.html
+    </div>
+</body>
+</html>
