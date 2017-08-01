@@ -894,3 +894,60 @@ body {
 .personal-one__since {
 	font-size: 14px;
 }
+
+.review {
+	margin-bottom: 50px;
+}
+
+.review__img {
+	width: 200px;
+	float: left;
+	margin-right: 30px;
+
+	img {
+		display: block;
+		width: 100%;
+	}
+}
+
+.review-descr {
+	margin-left: 230px;
+}
+
+.review__title {
+	font-size: 24px;
+	font-weight: 300;
+	margin-bottom: 10px;
+}
+
+.review__date {
+	font-size: 16px;
+	font-style: italic;
+	margin-bottom: 20px;
+}
+
+.review__text {
+	font-size: 14px;
+	margin-bottom: 20px;
+}
+
+.review__more {
+	font-size: 14px;
+	font-weight: 700;
+	color: #cdab7a;
+	text-transform: uppercase;
+	cursor: pointer;
+	display: inline-block;
+
+	&:after {
+		content: "";
+		.sprite(@arrow);
+		transform: scale(0.5) rotate(180deg);
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+
+.review__hidden {
+	display: none;
+} 

@@ -126,7 +126,7 @@ $(document).ready(function() {
         $(this).addClass('active');
     });
 
-    $('.sert-slider .swiper-slide').magnificPopup({
+    $('.sert-slider .swiper-slide, .review__img').magnificPopup({
         type: 'image',
         closeOnContentClick: true,
         closeBtnInside: false,
@@ -135,5 +135,9 @@ $(document).ready(function() {
         image: {
             verticalFit: true
         }
+    });
+
+    $('.review__more').on('click', function() {
+        $(this).hide().next().slideDown()
     });
 });

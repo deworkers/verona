@@ -13,7 +13,48 @@
 </head>
 <body>
     //= template/head-in.html
-    //= template/catalog/card.html
+    
+    <div class="content">
+        <div class="wrap">
+            <div class="breadcrumb">
+                <a href="#">Главная</a>  •  <a href="#">Услуги</a>  •  Процедуры для лица
+            </div>
+            <h1>Отзывы</h1>
+            <div class="review clearfix">
+                <a href="/img/review.jpg" class="review__img">
+                    <img src="/img/review.jpg" alt="">
+                </a>
+                <div class="review-descr">
+                    <div class="review__title">Наташа Кулак</div>
+                    <div class="review__date">30 декабря 2016</div>
+                    <div class="review__text">Была у Вас в четверг на Дне открытых дверей на бесплатной диагностике кожи лица. Врач-косметолог (к своему большому сожалению не запомнила как ее зовут) после процедуры сканирования моего лица очень подробно рассказала и даже показала на компьютере все проблемные моменты.</div>
+                    <div class="review__more">Показать весь отзыв</div>
+                    <div class="review__hidden">
+                        <p>Скажу сразу, что обычно меня пугают бесплатные услуги, сразу появляется ощущение, что раз что-то сделают бесплатно, дальше будут навязывать дорогостоящие процедуры. К счастью страхи оказались напрасными. К доктору сразу возникло доверие, она подробно расспросила меня как я ухаживаю за лицом, сказала что на данный момент это оптимальный вариант ухода, рассказала на что обратить внимание, рассказала про косметическую продукцию представленную в клинике. Из рекомендованных продуктов я купила средство от прыщей, которые нет нет да вылезут особенно перед каким-нибудь важным мероприятием и даже уже почувствовала первые результаты его применения. Приятным бонусом был пакетик с пробниками))))) и шампанское с конфетами у администратора. </p>
+                        <p>Персонал очень приветлив, было много пациентов, но не было хаоса или толпы. </p>
+                        <p>П.С. меня как истинного фаната Италии и всего итальянского очаровали старые фотографии на входе в клинику.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="wrap">
+            <div class="form-order">
+                <div class="order-title">Запись на прием</div>
+                <form action="" id="order">
+                    <div class="form-left">
+                        <input type="text" name="name" placeholder="Ваше имя*">
+                        <input type="text" name="phone" placeholder="Номер телефона*">
+                        <input type="text" name="email" placeholder="E-mail">
+                    </div>
+                    <div class="form-right">
+                        <textarea name="text" placeholder="Текст сообщения"></textarea>
+                    </div>
+                    <button class="order-submit" type="submit">Записаться</button>
+                </form>
+            </div>
+        </div>  
+    </div>
+
     //= template/footer.html
     //= template/modal.html
     </div>
