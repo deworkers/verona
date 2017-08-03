@@ -16,7 +16,7 @@ $(document).ready(function() {
 
     /*Модальные окна*/
     var overlay = $('#overlay'); 
-    var open_modal = $('.open_modal'); 
+    var open_modal = $('.open-modal'); 
     var close = $('.modal__close'); 
     var modal = $('.modal'); 
 
@@ -140,4 +140,70 @@ $(document).ready(function() {
     $('.review__more').on('click', function() {
         $(this).hide().next().slideDown()
     });
+
+    $("#order").validate({
+        rules:{
+            name:{
+                required: true
+            },
+            phone:{
+                required: true,
+            },
+        },
+        messages:{
+            name:{
+                required: "Это поле обязательно для заполнения",
+            },
+            phone:{
+                required: "Это поле обязательно для заполнения",
+            },
+        },
+        submitHandler: function() {
+            $('.form-order').html('<h2>Ваше сообщение отправлено</h2><p>Наш менеджер свяжется с вами в бижайшее время</p>')
+        }
+
+    });
+
+    $("#order").submit(function() { //устанавливаем событие отправки для формы с id=form
+        var formData = $(this).serialize(); //собераем все данные из формы
+        $.ajax({
+            type: "POST", //Метод отправки
+            url: "/ajax/send.php", //путь до php фаила отправителя
+            data: formData
+        });
+    });
+
+    $("#order-form").validate({
+        rules:{
+            name:{
+                required: true
+            },
+            phone:{
+                required: true,
+            },
+        },
+        messages:{
+            name:{
+                required: "Это поле обязательно для заполнения",
+            },
+            phone:{
+                required: "Это поле обязательно для заполнения",
+            },
+        },
+        submitHandler: function() {
+            $('.form-order').html('<h2>Ваше сообщение отправлено</h2><p>Наш менеджер свяжется с вами в бижайшее время</p>')
+        }
+
+    });
+
+    $("#order-form").submit(function() { //устанавливаем событие отправки для формы с id=form
+        var formData = $(this).serialize(); //собераем все данные из формы
+        $.ajax({
+            type: "POST", //Метод отправки
+            url: "/ajax/send.php", //путь до php фаила отправителя
+            data: formData
+        });
+    });
+
+
 });
