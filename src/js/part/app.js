@@ -141,6 +141,10 @@ $(document).ready(function() {
         $(this).hide().next().slideDown()
     });
 
+    $('.review__hide').on('click', function() {
+        $(this).parent('.review__hidden').slideUp().prev().show();
+    });
+
     $("#order").validate({
         rules:{
             name:{
@@ -193,7 +197,39 @@ $(document).ready(function() {
         submitHandler: function() {
             $('.form-order').html('<h2>Ваше сообщение отправлено</h2><p>Наш менеджер свяжется с вами в бижайшее время</p>')
         }
+    });
 
+    $("#review").validate({
+        rules:{
+            name:{
+                required: true
+            },
+            text:{
+                required: true,
+            },
+        },
+        messages:{
+            name:{
+                required: "Это поле обязательно для заполнения",
+            },
+            text:{
+                required: "Это поле обязательно для заполнения",
+            },
+        },
+        submitHandler: function() {
+            $('.form-order').html('<h2>Спасибо за ваш отзыв</h2>')
+        }
+    });
+
+
+
+    $("#review").submit(function() { //устанавливаем событие отправки для формы с id=form
+        var formData = $(this).serialize(); //собераем все данные из формы
+        $.ajax({
+            type: "POST", //Метод отправки
+            url: "/ajax/send.php", //путь до php фаила отправителя
+            data: formData
+        });
     });
 
     $("#order-form").submit(function() { //устанавливаем событие отправки для формы с id=form
@@ -205,5 +241,18 @@ $(document).ready(function() {
         });
     });
 
+    $('.vacancy-title').on('click', function() {
+        $(this).next('.vacancy-hidden').slideToggle();
+        $(this).toggleClass('open');
+    });
 
+    var clear = function() {
+        if  ( $('.card-gallery .swiper-slide').length == 0 ) {
+            $('.card-left').hide();
+        }
+    }
+
+    clear();
+
+    
 });
