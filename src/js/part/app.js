@@ -22,7 +22,7 @@ $(document).ready(function() {
 
     // для открытия модалки нужна ссылка вида <a href="#name"></a> и класс "open_modal"
     // будет открыта модалка с id="name"
-    open_modal.click( function(event){
+    open_modal.on('click', function(event){
         modal.fadeOut(200);
         event.preventDefault(); 
         var div = $(this).attr('href'); 
@@ -32,13 +32,13 @@ $(document).ready(function() {
         baseBoxHeight = $('.mobile-menu__right').height();
     });
 
-    close.click(function() {
+    close.on('click', function() {
         modal.fadeOut(200);
         overlay.fadeOut(200);
         $('html, body').removeClass('j-noScroll');
     });
 
-    overlay.click(function(event) {
+    overlay.on('click', function(event) {
         if ( $( event.target ).attr('id') == 'overlay' ) {
             $(this).fadeOut(200);
             modal.fadeOut(200);
@@ -207,7 +207,12 @@ $(document).ready(function() {
             },
         },
         submitHandler: function() {
-            $('.form-order').html('<h2>Ваше сообщение отправлено</h2><p>Наш менеджер свяжется с вами в бижайшее время</p>')
+            $('.order__inn').html('<div style="text-align: center"><div class="modal__close"></div><h2>Ваше сообщение отправлено</h2><p>Наш менеджер свяжется с вами в бижайшее время</p></div>');
+            $('.modal__close').on('click', function() {
+                $('.modal').fadeOut(200);
+                $('#overlay').fadeOut(200);
+                $('html, body').removeClass('j-noScroll');
+            });
         }
     });
 
